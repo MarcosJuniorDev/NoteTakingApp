@@ -12,5 +12,25 @@ namespace NoteTaking_
 
 
         }
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void loadButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void newButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
