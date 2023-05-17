@@ -50,7 +50,14 @@ namespace NoteTaking_
         {
             try
             {
-                Notes.Rows[previusNote.CurrentCell.RowIndex].Delete();
+                if (Notes.Rows[previusNote.CurrentCell.RowIndex] == null)
+                {
+                    Console.WriteLine("Nota invalida");
+                }
+                else
+                {
+                    Notes.Rows[previusNote.CurrentCell.RowIndex].Delete();
+                }
             }
             catch (Exception ex)
             {
@@ -64,11 +71,19 @@ namespace NoteTaking_
             noteBox.Text = "";
         }
 
-        private void previusNote_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        /*private void previusNote_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            title.Text = Notes.Rows[previusNote.CurrentCell.RowIndex].ItemArray[0].ToString();
-            note.Text = Notes.Rows[previusNote.CurrentCell.RowIndex].ItemArray[1].ToString();
-            Editing = true;
-        }
+            if (Notes.Columns.Contains())
+            {
+                title.Text = Notes.Rows[previusNote.CurrentCell.RowIndex].ItemArray[0].ToString();
+                note.Text = Notes.Rows[previusNote.CurrentCell.RowIndex].ItemArray[1].ToString();
+                Editing = true;
+            }
+            else
+            {
+                throw new Exception("Row invalida");
+            }
+            
+        }*/
     }
 }

@@ -84,7 +84,6 @@
             this.previusNote.RowTemplate.Height = 25;
             this.previusNote.Size = new System.Drawing.Size(393, 347);
             this.previusNote.TabIndex = 4;
-            this.previusNote.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.previusNote_CellDoubleClick);
             // 
             // saveButton
             // 
